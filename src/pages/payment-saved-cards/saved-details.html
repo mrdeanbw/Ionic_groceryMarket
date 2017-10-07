@@ -1,0 +1,25 @@
+<ion-content padding id="content">
+    <ion-list>
+        <ion-item *ngFor="let method of methods">
+            <div class="saved-card">
+                <img src="{{'assets/icon/Common/Delete.png'}}" />
+                <span>{{method.cardnum}}</span>
+                <span>{{method.name}}</span>
+            </div>
+            <div *ngIf="method.show">
+                <div class="detail">
+                    <div class="detail-left">
+                        <span>CVV</span>
+                    </div>
+                    <div class="detail-right">
+                        <img src="{{'assets/icon/Common/Padlock.png'}}" />
+                        <span>Your Card Details are secured via 128 Bit encryption</span>
+                    </div>
+                </div>
+                <button ion-button full (click)="gotoPaymentCreditCard()">Pay Now</button>
+            </div>
+            <div *ngIf="method.show" class="active"></div>
+            <div *ngIf="!method.show" class="deactive"></div>
+        </ion-item>
+    </ion-list>
+</ion-content>

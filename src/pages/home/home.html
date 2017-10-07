@@ -1,0 +1,27 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+        <div class="navbar-header">
+            <div class="header-address">
+                <div>
+                    <span class="header-address-line">Seattle</span>
+                    <img src="assets/icon/Common/Pencil.png" class="edit-address" />
+                </div>
+            </div>
+            <span class="header-right-area">
+                <img src="assets/icon/Common/Search%20Inactive.png" />
+                <img src="assets/icon/Common/Cart.png" />
+            </span>
+        </div>
+    </ion-navbar>
+</ion-header>
+
+
+<ion-content padding id="content">
+    <super-tabs #homeTabs height="100%" [rootNavCtrl]="navCtrl">
+        <super-tab [tabRoot]="productRoot" [navParams]="productParams" title="Products"></super-tab>
+        <super-tab [tabRoot]="productRoot" [navParams]="serviceParams" title="Services"></super-tab>
+    </super-tabs>
+</ion-content>

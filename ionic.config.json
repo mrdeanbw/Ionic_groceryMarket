@@ -1,0 +1,12 @@
+{
+  "name": "groceriesApp",
+  "app_id": "",
+  "proxies": [
+    {
+      "path": "/user",
+      "proxyUrl": "http://192.241.167.128/user"
+    }
+  ],
+  "integrations": {},
+  "type": "ionic-angular"
+}

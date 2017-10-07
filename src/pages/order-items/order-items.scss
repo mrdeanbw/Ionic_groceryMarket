@@ -1,0 +1,76 @@
+page-order-items {
+    ion-navbar {
+        border-bottom: 1px solid #c8c7cc;
+        .back-button {
+            padding-left: 16px;
+        }
+        .toolbar-background {
+            background-color: color($colors, white);
+        }
+        .navbar-header {
+            margin-left: 10px;
+            display: flex;
+            justify-content: space-between;
+            margin-right: 16px;
+            margin-bottom: 4px;
+            align-items: center;
+        }
+        .header-address {
+            &-label {
+                margin-bottom: 4px;
+            }
+            &-line {
+                color: color($colors, orange);
+                font-size: 1.7rem;
+            }
+        }
+    }
+    #content {
+        background-color: color($colors, light);
+        ion-item {
+            margin: $content-margin;
+            width: auto;
+            border: 0;
+            background-color: color($colors, white);
+            box-shadow: 0 0 6px 1px color($colors, grey);
+            .item-inner {
+                border: 0;
+            }
+            .image {
+                width: 40px;
+                height: 40px;
+                text-align: center;
+            }
+            .order-item-product {
+                h3 {
+                    margin: 10px 0;
+                    color: color($colors, primary);
+                }
+                h4 {
+                    color: grey;
+                }
+                .cost {
+                    float: left;
+                    text-decoration: line-through;
+                    margin-right: 10px;
+                }
+                .item-count {
+                    display: flex;
+                    border: 1px solid grey;
+                    border-radius: 15px;
+                    padding: 0px 5px;
+                    margin-top: 25px;
+                    span {
+                        flex: 1;
+                        text-align: center;
+                        padding: 0, 15px;
+                        color: color($colors, primary);
+                    }
+                    .count {
+                        flex: 3;
+                    }
+                }
+            }
+        }
+    }
+}

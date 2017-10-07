@@ -1,0 +1,112 @@
+page-login {
+    ion-navbar {
+        .navbar-header {
+            margin-left: 32px;
+            display: flex;
+            justify-content: space-between;
+            margin-right: 32px;
+            margin-bottom: 4px;
+            align-items: center;
+            padding: 10px;
+        }
+        .header-address {
+            &-label {
+                margin-bottom: 4px;
+            }
+            &-line {
+                color: color($colors, orange);
+                font-size: 2.0rem;
+            }
+        }
+        .header-right-area {
+            img {
+                margin: 4px 0 4px 20px;
+                width: 24px;
+            }
+        }
+    }
+    #content {
+        background-color: #eee;
+        padding: 30px;
+        ion-card {
+            margin-top: 30px;
+            margin-bottom: 0px;
+        }
+        .login-btn {
+            margin: 0px 10px;
+            button {
+                padding: 25px;
+                font-size: 1.7rem;
+                text-transform: none;
+            }
+        }
+        .login-form {
+            background-color: white;
+            padding: 10px 15px;
+            p {
+                color: color($colors, orange);
+                font-size: 1.7rem;
+                margin-top: 20px;
+                margin-left: 20px;
+            }
+            ion-item {
+                border: 1px solid #ddd;
+                border-radius: 30px !important;
+                margin-top: 10px;
+                margin-bottom: 20px;
+            }
+            // ion-input:focus {
+            //     ion-item {
+            //         border-color: orange !important;
+            //     }
+            // }
+        }
+        .social-login {
+            background-color: #f8f8f8;
+            padding: 20px 10px;
+            /* Style all font awesome icons */
+            ion-col {
+                text-align: center;
+            }
+            .social-icon {
+                position: relative;
+                display: inline-flex;
+                ion-label {
+                    color: color($colors, gray);
+                    font-size: 1.0rem;
+                }
+                .fa {
+                    padding: 8px;
+                    font-size: 15px;
+                    width: 30px;
+                    height: 30px;
+                    text-align: center;
+                    text-decoration: none;
+                    margin: 5px 2px;
+                    border-radius: 50%;
+                    margin-right: 10px;
+                }
+                /* Add a hover effect if you want */
+                .fa:hover {
+                    opacity: 0.7;
+                }
+                /* Set a specific color for each brand */
+                /* Facebook */
+                .fa-facebook {
+                    background: #3B5998;
+                    color: white;
+                }
+                /* Twitter */
+                .fa-google-plus {
+                    background: #dd4b39;
+                    color: white;
+                }
+            }
+        }
+        .other-link {
+            margin-top: 30px;
+            text-align: center;
+            font-size: 1.7rem;
+        }
+    }
+}

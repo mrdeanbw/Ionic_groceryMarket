@@ -1,0 +1,167 @@
+<!--
+  Generated template for the DateTime page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+    <ion-navbar #navBar>
+        <div class="navbar-header">
+            <div class="header-address">
+                <div>
+                    <span class="header-address-line">Date and Time</span>
+                </div>
+            </div>
+        </div>
+    </ion-navbar>
+
+    <ion-item class="page-header-item">
+        <div class="page-header">
+            <span class="page-header-name">
+                <span class="page-header-name-text">Select Date and Time</span>
+            </span>
+        </div>
+    </ion-item>
+</ion-header>
+
+
+<ion-content padding id="content">
+    <ion-list>
+        <ion-item class="date">
+            <img src="assets/icon/Common/Prev.png" (click)="prevDate()" />
+            <span>{{startDate.toISOString()|date:'MMM dd, yyyy'}}</span>
+            <img src="assets/icon/Common/Next.png" (click)="nextDate()" />
+        </ion-item>
+        <ion-item class="color-cost-pan">
+            <div class="color-cost">
+                <div class="color-cost-yellow"></div>
+                <span>$ 4.99</span>
+            </div>
+            <div class="color-cost">
+                <div class="color-cost-orange"></div>
+                <span>$ 5.99</span>
+            </div>
+            <div class="color-cost">
+                <div class="color-cost-pink"></div>
+                <span>$ 6.99</span>
+            </div>
+            <div class="color-cost">
+                <div class="color-cost-red"></div>
+                <span>$ 7.99</span>
+            </div>
+        </ion-item>
+        <ion-item>
+            <ion-grid>
+                <ion-row>
+                    <ion-col col-2>
+                        <div class="time time-orange" (click)="onClickTime(0)">
+                            <img *ngIf="time[0]" src="assets/icon/Common/Check.png" />
+                            <span>7 AM</span>
+                        </div>
+                    </ion-col>
+                    <ion-col col-2>
+                        <div class="time time-orange" (click)="onClickTime(1)">
+                            <img *ngIf="time[1]" src="assets/icon/Common/Check.png" />
+                            <span>8 AM</span>
+                        </div>
+                    </ion-col>
+                    <ion-col col-2>
+                        <div class="time time-orange" (click)="onClickTime(2)">
+                            <img *ngIf="time[2]" src="assets/icon/Common/Check.png" />
+                            <span>9 AM</span>
+                        </div>
+                    </ion-col>
+                    <ion-col col-2>
+                        <div class="time time-yellow" (click)="onClickTime(3)">
+                            <img *ngIf="time[3]" src="assets/icon/Common/Check.png" />
+                            <span>10 AM</span>
+                        </div>
+                    </ion-col>
+                    <ion-col col-2>
+                        <div class="time time-yellow" (click)="onClickTime(4)">
+                            <img *ngIf="time[4]" src="assets/icon/Common/Check.png" />
+                            <span>11 AM</span>
+                        </div>
+                    </ion-col>
+                    <ion-col col-2>
+                        <div class="time time-yellow" (click)="onClickTime(5)">
+                            <img *ngIf="time[5]" src="assets/icon/Common/Check.png" />
+                            <span>12 AM</span>
+                        </div>
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col col-2>
+                        <div class="time time-yellow" (click)="onClickTime(6)">
+                            <img *ngIf="time[6]" src="assets/icon/Common/Check.png" />
+                            <span>1 PM</span>
+                        </div>
+                    </ion-col>
+                    <ion-col col-2>
+                        <div class="time time-yellow" (click)="onClickTime(7)">
+                            <img *ngIf="time[7]" src="assets/icon/Common/Check.png" />
+                            <span>2 PM</span>
+                        </div>
+                    </ion-col>
+                    <ion-col col-2>
+                        <div class="time time-yellow" (click)="onClickTime(8)">
+                            <img *ngIf="time[8]" src="assets/icon/Common/Check.png" />
+                            <span>3 PM</span>
+                        </div>
+                    </ion-col>
+                    <ion-col col-2>
+                        <div class="time time-pink" (click)="onClickTime(9)">
+                            <img *ngIf="time[9]" src="assets/icon/Common/Check.png" />
+                            <span>4 PM</span>
+                        </div>
+                    </ion-col>
+                    <ion-col col-2>
+                        <div class="time time-pink" (click)="onClickTime(10)">
+                            <img *ngIf="time[10]" src="assets/icon/Common/Check.png" />
+                            <span>5 PM</span>
+                        </div>
+                    </ion-col>
+                    <ion-col col-2>
+                        <div class="time time-red" (click)="onClickTime(11)">
+                            <img *ngIf="time[11]" src="assets/icon/Common/Check.png" />
+                            <span>6 PM</span>
+                        </div>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </ion-item>
+    </ion-list>
+    <ion-list>
+        <ion-item (click)="openCalendar()">
+            <ion-avatar item-left>
+                <img src="assets/icon/Common/Calendar.png" />
+            </ion-avatar>
+            <div class="show-calendar">
+                <span>Show Advanced</span>
+                <span item-right>
+                  <img src="assets/icon/Common/Next.png" />
+                </span>
+            </div>
+        </ion-item>
+    </ion-list>
+    <!--<button (click)="openCalendar()" ion-button full>Open calendar </button>-->
+</ion-content>
+
+<ion-footer>
+    <div class="cart-btn" (click)="gotoOrderItems()">
+        <img src="assets/icon/Common/Footer Cart.png" />
+        <div>
+            <span>Review Cart</span>
+        </div>
+    </div>
+    <div class="proceed-btn" (click)="gotoOrderSummany()">
+        <span>Proceed to checkout</span>
+        <div class="proceed-btn-right-item">
+            <div>
+                <span>$ 80</span>
+            </div>
+            <img src="assets/icon/Common/Next White.png" />
+        </div>
+    </div>
+</ion-footer>

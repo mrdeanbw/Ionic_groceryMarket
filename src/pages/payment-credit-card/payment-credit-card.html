@@ -1,0 +1,70 @@
+<!--
+  Generated template for the PaymentCreditCard page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+    <ion-navbar #navBar>
+        <div class="navbar-header">
+            <div class="header-address">
+                <div>
+                    <span class="header-address-line">Payment</span>
+                </div>
+            </div>
+        </div>
+    </ion-navbar>
+
+    <ion-item class="page-header-item">
+        <div class="payment-header">
+            <p class="payment-header-text1">$ 127.00</p>
+            <span class="payment-header-text2">Transaction ID: 40114674955237183</span>
+        </div>
+    </ion-item>
+
+    <ion-item class="page-header-item">
+        <div class="page-header">
+            <span class="page-header-name">
+                <img src="assets/icon/Common/Card Add.png" />
+                <span class="page-header-name-text">Add New Credit Card</span>
+            </span>
+        </div>
+    </ion-item>
+
+</ion-header>
+
+<ion-content padding id="content">
+      <ion-item>
+          <div class="card-info">
+            <p>Card Number</p>
+            <ion-segment>
+                <ion-segment-button>XXXX</ion-segment-button>
+                <ion-segment-button>XXXX</ion-segment-button>
+                <ion-segment-button>XXXX</ion-segment-button>
+                <ion-segment-button>XXXX</ion-segment-button>
+            </ion-segment>
+            <p>Expiration Date</p>
+            <div class="date">
+              <span>MM</span>
+              <span>YYYY</span>
+            </div>
+            <div class="checkbox">
+                <input type="checkbox" id="savecheck" />
+                <label for="savecheck">
+                    <div><i class="fa fa-check"></i></div>Subscribe and Save 15%
+                </label>
+            </div>
+          </div>
+          <div class="detail">
+              <div class="detail-left">
+                  <span>CVV</span>
+              </div>
+              <div class="detail-right">
+                  <img src="{{'assets/icon/Common/Padlock.png'}}" />
+                  <span>Your Card Details are secured via 128 Bit encryption</span>
+              </div>
+          </div>
+          <button ion-button full (click)="gotoOrderConfirmation()">Pay Now</button>
+      </ion-item>
+</ion-content>

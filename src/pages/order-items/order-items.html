@@ -1,0 +1,53 @@
+<!--
+  Generated template for the OrderItems page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+    <ion-navbar #navBar>
+        <div class="navbar-header">
+            <div class="header-address">
+                <div>
+                    <span class="header-address-line">Buying Items</span>
+                </div>
+            </div>
+        </div>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding id="content">
+    <ion-list>
+        <ion-item *ngFor="let item of items">
+            <span item-left class="image">
+                <img class="order-item-image"  src="{{'assets/icon/Common/Grocery.png'}}" />
+            </span>
+            <div class="order-item-product">
+                <ion-grid>
+                    <ion-row>
+                        <ion-col col-8>
+                            <h2>{{item.name}}</h2>
+                            <h3>$ {{item.cost}} each</h3>
+                            <h4 class="cost">$ 2.99</h4>
+                            <h4>(20% OFF)</h4>
+                        </ion-col>
+                        <ion-col col-4>
+                            <div class="item-count">
+                                <span (click)="decrease(item)">-</span>
+                                <span class="count">{{item.count}}</span>
+                                <span (click)="increase(item)">+</span>
+                            </div>
+                        </ion-col>
+                    </ion-row>
+                </ion-grid>
+            </div>
+
+            <span item-right>
+                <img src="assets/icon/Common/Next.png" />
+            </span>
+        </ion-item>
+    </ion-list>
+</ion-content>

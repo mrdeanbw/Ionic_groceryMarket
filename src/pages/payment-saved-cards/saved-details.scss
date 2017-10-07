@@ -1,0 +1,84 @@
+page-saved-details {
+    #content {
+        background-color: color($colors, light);
+        // padding: 0px;
+        .scroll-content {
+            padding: 0px;
+        }
+        ion-item {
+            margin: $content-margin;
+            padding: 0;
+            width: auto;
+            border: 0;
+            background-color: color($colors, white);
+            box-shadow: 0 0 6px 1px color($colors, grey);
+            .item-inner {
+                border: 0;
+                padding: 0;
+            }
+            ion-label {
+                padding: 0;
+                margin: 0;
+            }
+            button {
+                margin: 0;
+            }
+            .active {
+                position: absolute;
+                width: 10px;
+                height: 10px;
+                left: calc(100% - 10px);
+                top: 0;
+                background-color: color($colors, primary);
+                border-radius: 10px;
+            }
+            .deactive {
+                position: absolute;
+                width: 10px;
+                height: 10px;
+                left: calc(100% - 10px);
+                top: 0;
+                background-color: color($colors, grey);
+                border-radius: 10px;
+            }
+            .saved-card {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 5px;
+                padding-right: 15px;
+                span {
+                    font-size: 12px;
+                }
+            }
+            .detail {
+                background-color: color($colors, light);
+                display: flex;
+                align-items: center;
+                padding: 15px;
+                &-left {
+                    margin-right: 20px;
+                    span{
+                        border: 1px solid color($colors, grey);
+                        border-radius: 15px;
+                        font-size: 12px;
+                        color: color($colors, primary);
+                        padding: 5px 10px;
+                    }
+                }
+                &-right {
+                    display: flex;
+                    align-items: center;
+                    // img {
+                    //     width: 25px;
+                    // }
+                    span{
+                        font-size: 12px;
+                        white-space: normal;
+                        color: color($colors, grey);
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,102 @@
+page-order-confirmation {
+    ion-navbar {
+        border-bottom: 1px solid #c8c7cc;
+        .back-button {
+            padding-left: 16px;
+        }
+        .toolbar-background {
+            background-color: color($colors, white);
+        }
+        .edit-address {
+            width: 12px;
+        }
+        .navbar-header {
+            margin-left: 10px;
+            display: flex;
+            justify-content: space-between;
+            margin-right: 16px;
+            margin-bottom: 4px;
+            align-items: center;
+        }
+        .header-address {
+            &-label {
+                margin-bottom: 4px;
+            }
+            &-line {
+                color: color($colors, orange);
+                font-size: 1.7rem;
+            }
+        }
+    }
+    .payment-header {
+        padding: 30px 30px;
+        text-align: center;
+        p{
+            margin-top: 15px;
+        }
+        &-text1 {
+            font-size: 14px;
+            color: color($colors, grey);
+        }
+        &-text2 {
+            font-size: 14px;
+            white-space: normal;
+        }
+    }
+    .page-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-left: 16px;
+        div {
+            display: flex;
+            align-items: center;
+            span{
+                color: color($colors, primary);
+            }
+        }
+        img {
+            margin-right: 10px;
+        }
+        &-text{
+            color: color($colors, primary);
+        }
+        &-item {
+            padding: 0;
+        }
+    }
+    #content {
+        background-color: color($colors, light);
+        .scroll-content {
+            padding-top: 0px;
+        }
+
+        ion-item {
+            margin: $content-margin;
+            padding: 0;
+            width: auto;
+            border: 0;
+            background-color: color($colors, white);
+            box-shadow: 0 0 6px 1px color($colors, grey);
+            p{
+                color: black;
+            }
+            .item-inner {
+                border: 0;
+                padding: 0;
+            }
+            ion-label {
+                display: flex;
+                align-items: center;
+                justify-content: space-around
+            }
+            span {
+                font-size: 14px;
+                color: color($colors, grey);
+            }
+            .time {
+                color: color($colors, primary);
+            }
+        }
+    }
+}

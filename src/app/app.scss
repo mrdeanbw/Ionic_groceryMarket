@@ -1,0 +1,118 @@
+// http://ionicframework.com/docs/v2/theming/
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+a {
+    color: inherit;
+}
+
+.rlt {
+    position: relative;
+}
+
+.cf {
+    clear: both;
+}
+
+.no-border {
+    border: none;
+}
+
+.post-author {
+    font-size: 0.8em;
+    font-weight: bold;
+}
+
+.post-time {
+    font-size: 0.8em;
+}
+
+.profile-picture {
+    border-radius: 50%;
+}
+
+.item-no-border {
+    .item-inner {
+        border: none;
+    }
+}
+
+ion-navbar.no-border {
+    .toolbar-background {
+        border: none;
+    }
+}
+
+.align-top {
+    align-items: flex-start;
+}
+
+.list-full-border {
+    .item {
+        border-bottom: 1px solid;
+        .item-inner {
+            border: none;
+        }
+    }
+}
+
+.list-no-border {
+    .item {
+        &:first-child {
+            border: none;
+        }
+        &:last-child {
+            border: none;
+        }
+        .item-inner {
+            border: none;
+        }
+    }
+}
+
+ion-item.item-block.item-no-border {
+    .item-inner {
+        border: none;
+    }
+}
+
+.item {
+    p {
+        line-height: 20px;
+    }
+}
+
+.menu-left {
+    .profile-picture {
+        width: 7em;
+        height: 7em;
+        margin-top: 0.75em;
+    }
+    .closemenu {
+        font-size: 20px;
+        padding: 20px;
+    }
+    .menu-item {
+        color: color($colors, dark);
+        .item-icon {
+            font-size: 32px;
+        }
+    }
+}
+
+.logout {
+    margin-left: 50px;
+    position: relative;
+    top: 40%;
+    color: color($colors, grey);
+}

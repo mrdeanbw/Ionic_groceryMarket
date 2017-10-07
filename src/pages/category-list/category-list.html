@@ -1,0 +1,47 @@
+<!--
+  Generated template for the CategoryList page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+    <ion-navbar #navBar>
+        <div class="navbar-header">
+            <div class="header-address">
+                <div>
+                    <span class="header-address-line">Seattle</span>
+                    <img src="assets/icon/Common/Pencil.png" class="edit-address" />
+                </div>
+            </div>
+            <span class="header-right-area">
+          <img src="assets/icon/Common/Search%20Inactive.png" />
+          <!--<img src="assets/icon/Common/Cart.png" />-->
+      </span>
+        </div>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding id="category-list">
+    <ion-list>
+        <ion-item *ngFor="let item of items" (click)="selectCategory(item)">
+            <!--<ion-thumbnail item-left>
+        <img [src]="'assets/icon/categories/groceries/' + item.category + '.png'" />
+      </ion-thumbnail>-->
+            <span item-left class="image">
+              <img class="category-item-image"  src="{{'assets/icon/categories/groceries/' + item.category + '.png'}}" />
+            </span>
+            <div class="category-item-name-next">
+                <div>
+                    <h2>{{item.category}}</h2>
+                    <span class="category-item-subtext"></span>
+                </div>
+                <span item-right>
+                  <img src="assets/icon/Common/Next.png" />
+                </span>
+            </div>
+        </ion-item>
+    </ion-list>
+</ion-content>

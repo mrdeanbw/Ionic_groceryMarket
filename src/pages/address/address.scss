@@ -1,0 +1,86 @@
+page-address {
+    ion-navbar {
+        border-bottom: 1px solid #c8c7cc;
+        .back-button {
+            padding-left: 16px;
+        }
+        .toolbar-background {
+            background-color: color($colors, white);
+        }
+        .edit-address {
+            width: 12px;
+        }
+        .navbar-header {
+            margin-left: 10px;
+            display: flex;
+            justify-content: space-between;
+            margin-right: 16px;
+            margin-bottom: 4px;
+            align-items: center;
+        }
+        .header-address {
+            &-label {
+                margin-bottom: 4px;
+            }
+            &-line {
+                color: color($colors, orange);
+                font-size: 1.7rem;
+            }
+        }
+    }
+    .page-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-left: 16px;
+        &-name {
+            display: flex;
+            align-items: center;
+            &-text {
+                margin-left: 16px;
+            }
+        }
+        &-item {
+            padding: 0;
+        }
+    }
+    #content {
+        background-color: color($colors, light);
+        .scroll-content {
+            padding-top: 0px;
+        }
+        ion-item {
+            margin: $content-margin;
+            width: auto;
+            border: 0;
+            background-color: color($colors, white);
+            box-shadow: 0 0 6px 1px color($colors, grey);
+            ion-label {
+                display: flex;
+                div {
+                    margin-top: 0px;
+                }
+                span {
+                    font-size: 13px;
+                    color: color($colors, gray);
+                }
+            }
+            img {
+                margin-right: 15px;
+                width: 20px;
+                height: 25px;
+            }
+            .item-inner {
+                border: 0;
+            }
+        }
+        .add-address {
+            margin-top: 30px;
+            .plus-sign {
+                font-size: 25px;
+                color: color($colors, primary);
+                margin-right: 15px;
+            }
+        }
+    }
+}

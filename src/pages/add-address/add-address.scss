@@ -1,0 +1,54 @@
+page-add-address {
+    ion-navbar {
+        border-bottom: 1px solid #c8c7cc;
+        .back-button {
+            padding-left: 16px;
+        }
+        .toolbar-background {
+            background-color: color($colors, white);
+        }
+        .edit-address {
+            width: 12px;
+        }
+        .navbar-header {
+            margin-left: 10px;
+            display: flex;
+            justify-content: space-between;
+            margin-right: 16px;
+            margin-bottom: 4px;
+            align-items: center;
+        }
+        .header-address {
+            &-label {
+                margin-bottom: 4px;
+            }
+            &-line {
+                color: color($colors, orange);
+                font-size: 1.7rem;
+            }
+        }
+    }
+    #content {
+        background-color: color($colors, light);
+        .scroll-content {
+            padding-top: 0px;
+        }
+        ion-card {
+            margin-top: 20px;
+            padding: 30px 30px;
+            p {
+                color: color($colors, primary);
+                margin-left: 15px;
+            }
+            .input-has-focus {
+                border-color: color($colors, primary);
+                // border-radius: 20px;
+            }
+            ion-item {
+                margin-bottom: 20px;
+                border-radius: 20px;
+                border: 1px solid color($colors, gray);
+            }
+        }
+    }
+}

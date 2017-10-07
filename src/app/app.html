@@ -1,0 +1,26 @@
+<ion-menu [content]="content">
+    <ion-content class="menu-left">
+        <ion-icon class="closemenu" color="primary" menuClose item-left name="ios-close-circle-outline"></ion-icon>
+        <!-- User profile -->
+        <div text-center>
+            <a menuClose>
+                <img class="profile-picture" src="{{ 'assets/img/thumb/adam.jpg' }}">
+                <h4>Hiren Kesariya</h4>
+            </a>
+
+        </div>
+
+        <ion-list class="list-full-border">
+            <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
+                <ion-icon item-left name="{{ p.icon }}"></ion-icon>
+                {{ p.title }}
+            </button>
+        </ion-list>
+        <div class="logout">
+            <h4 menuClose (click)="logout()">Log Out</h4>
+        </div>
+    </ion-content>
+
+</ion-menu>
+
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

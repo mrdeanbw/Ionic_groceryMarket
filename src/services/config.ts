@@ -1,0 +1,1 @@
+export let SERVER_URL = "http://192.241.167.128/";

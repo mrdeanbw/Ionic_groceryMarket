@@ -1,0 +1,98 @@
+page-product-list-by-category-page {
+    ion-navbar {
+        border-bottom: 1px solid #c8c7cc;
+        .back-button {
+            padding-left: 16px;
+        }
+        .toolbar-background {
+            background-color: color($colors, white);
+        }
+        .edit-address {
+            width: 12px;
+        }
+        .navbar-header {
+            margin-left: 10px;
+            display: flex;
+            justify-content: space-between;
+            margin-right: 16px;
+            margin-bottom: 4px;
+            align-items: center;
+        }
+        .header-address {
+            &-label {
+                margin-bottom: 4px;
+            }
+            &-line {
+                color: color($colors, orange);
+                font-size: 1.7rem;
+            }
+        }
+        .header-right-area {
+            img {
+                margin: 4px 0 4px 8px;
+                width: 24px;
+            }
+            ion-badge {
+                border-radius: 20px;
+                margin-left: -10px;
+                vertical-align: top;
+            }
+        }
+    }
+    .shop-item-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-left: 16px;
+        &-name {
+            display: flex;
+            align-items: center;
+            &-text {
+                margin-left: 16px;
+            }
+        }
+        &-item {
+            padding: 0;
+        }
+        .shop-item-change-link {
+            font-size: $font-size-base;
+            color: color($colors, orange);
+        }
+    }
+    #content {
+        padding: 0;
+        .scroll-content {
+            padding: 0;
+            color: color($colors, black);
+            super-tabs {
+                .segment .segment-button {
+                    color: color($colors, black);
+                    background-color: color($colors, white);
+                }
+                ion-toolbar {
+                    padding: 0;
+                    .toolbar-background {
+                        background-color: color($colors, white);
+                    }
+                    .toolbar-content {
+                        ion-segment {
+                            .segment-button {
+                                line-height: 5.6rem;
+                                &.segment-activated {
+                                    background-color: color($colors, light);
+                                    color: color($colors, orange);
+                                }
+                            }
+                        }
+                        .slide {
+                            background-color: color($colors, orange);
+                        }
+                    }
+                }
+                .swiper-pagination-bullet-active {
+                    background-color: color($colors, orange);
+                }
+            }
+        }
+    }
+}

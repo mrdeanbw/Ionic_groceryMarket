@@ -1,0 +1,185 @@
+page-payment-credit-card {
+    ion-navbar {
+        border-bottom: 1px solid #c8c7cc;
+        .back-button {
+            padding-left: 16px;
+        }
+        .toolbar-background {
+            background-color: color($colors, white);
+        }
+        .edit-address {
+            width: 12px;
+        }
+        .navbar-header {
+            margin-left: 10px;
+            display: flex;
+            justify-content: space-between;
+            margin-right: 16px;
+            margin-bottom: 4px;
+            align-items: center;
+        }
+        .header-address {
+            &-label {
+                margin-bottom: 4px;
+            }
+            &-line {
+                color: color($colors, orange);
+                font-size: 1.7rem;
+            }
+        }
+    }
+    .payment-header {
+        padding: 30px 0px;
+        text-align: center;
+        &-text1 {
+            font-size: 25px;
+            color: black;
+            margin-bottom: 15px;
+        }
+        &-text2 {
+            font-size: 14px;
+            color: color($colors, grey);
+        }
+    }
+    .page-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-left: 16px;
+        &-name {
+            display: flex;
+            align-items: center;
+            &-text {
+                margin-left: 16px;
+                font-size: 15px;
+            }
+        }
+        &-item {
+            padding: 0;
+        }
+    }
+    #content {
+        background-color: color($colors, light);
+        .scroll-content {
+            padding-top: 0px;
+        }
+        ion-item {
+            margin: $content-margin;
+            padding: 0;
+            width: auto;
+            border: 0;
+            background-color: color($colors, white);
+            box-shadow: 0 0 6px 1px color($colors, grey);
+            .item-inner {
+                border: 0;
+                padding: 0;
+            }
+            ion-label {
+                padding: 0;
+                margin: 0;
+            }
+            button {
+                margin: 0;
+            }
+            .card-info {
+                padding: 15px;
+                ion-segment {
+                    margin-bottom: 15px;
+                    .segment-button {
+                        border-color: color($colors, grey);
+                        &:first-of-type {
+                            border-radius: 15px 0 0 15px;
+                        }
+                        &:last-of-type {
+                            border-radius: 0 15px 15px 0;
+                        }
+                    }
+                }
+                p {
+                    margin-bottom: 10px;
+                }
+                .date {
+                    float: left;
+                    display: flex;
+                    align-items: center;
+                    margin-right: 30px;
+                    span {
+                        border: 1px solid color($colors, grey);
+                        border-radius: 15px;
+                        font-size: 12px;
+                        color: color($colors, primary);
+                        padding: 5px 10px;
+                        margin-right: 15px;
+                    }
+                }
+            }           
+            .detail {
+                background-color: color($colors, light);
+                display: flex;
+                align-items: center;
+                padding: 15px;
+                &-left {
+                    margin-right: 20px;
+                    span{
+                        border: 1px solid color($colors, grey);
+                        border-radius: 15px;
+                        font-size: 12px;
+                        color: color($colors, primary);
+                        padding: 5px 10px;
+                    }
+                }
+                &-right {
+                    display: flex;
+                    align-items: center;
+                    // img {
+                    //     width: 25px;
+                    // }
+                    span{
+                        font-size: 12px;
+                        white-space: normal;
+                        color: color($colors, grey);
+                    }
+                }
+            }
+            .checkbox {
+                input {
+                    display: none;
+                }
+                label {
+                    color: color($colors, primary);
+                    font-size: 12px;
+                }
+                label:hover {
+                    cursor: pointer;
+                }
+                span {
+                    color: color($colors, grey);
+                    margin: 20px 10px;
+                    font-size: 13px;
+                }
+                label div {
+                    width: 20px;
+                    height: 20px;
+                    display: inline-block;
+                    border: 1px solid color($colors, primary);
+                    color: color($colors, primary);
+                    text-align: center;
+                    line-height: 20px;
+                    margin-right: 6px;
+                    border-radius: 3px;
+                    cursor: pointer;
+                }
+                label i {
+                    font-size: 12px;
+                    opacity: 0;
+                }
+                label:hover div {
+                    opacity: 0.7;
+                }
+                input:checked+label i {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}

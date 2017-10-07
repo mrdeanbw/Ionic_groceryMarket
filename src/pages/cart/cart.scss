@@ -1,0 +1,132 @@
+page-cart {
+    ion-navbar {
+        border-bottom: 1px solid #c8c7cc;
+        .back-button {
+            padding-left: 16px;
+        }
+        .toolbar-background {
+            background-color: color($colors, white);
+        }
+        .edit-address {
+            width: 12px;
+        }
+        .navbar-header {
+            margin-left: 10px;
+            display: flex;
+            justify-content: space-between;
+            margin-right: 16px;
+            margin-bottom: 4px;
+            align-items: center;
+        }
+        .header-address {
+            &-label {
+                margin-bottom: 4px;
+            }
+            &-line {
+                color: color($colors, orange);
+                font-size: 1.7rem;
+            }
+        }
+        .header-cart-detail {
+            color: color($colors, gray);
+        }
+        .header-right-area {
+            img {
+                margin: 4px 0 4px 8px;
+                width: 24px;
+            }
+            ion-badge {
+                border-radius: 20px;
+                margin-left: -10px;
+                vertical-align: top;
+            }
+        }
+    }
+    #content {
+        background-color: color($colors, light);
+        .scroll-content {
+            padding-top: 0px;
+        }
+        .shop-title {
+            margin: 2*$content-margin 0 $content-margin 0;
+            ion-label {
+                display: flex;
+                div {
+                    margin-top: 3px;
+                }
+            }
+            img {
+                margin-right: 15px;
+            }
+        }
+        ion-item {
+            // margin: $content-margin;
+            width: auto;
+            border: 0;
+            background-color: color($colors, white);
+            box-shadow: 0 0 6px 1px color($colors, grey);
+            .item-inner {
+                border: 0;
+            }
+            .image {
+                width: 40px;
+                height: 40px;
+                text-align: center;
+            }
+            .cart-item {
+                h3 {
+                    margin: 10px 0;
+                    color: color($colors, primary);
+                }
+                h4 {
+                    color: grey;
+                }
+                &-count {
+                    display: flex;
+                    border: 1px solid grey;
+                    border-radius: 15px;
+                    padding: 0px 5px;
+                    margin-top: 25px;
+                    span {
+                        flex: 1;
+                        text-align: center;
+                        color: color($colors, primary);
+                    }
+                    .count {
+                        flex: 3;
+                    }
+                }
+            }
+        }
+    }
+    ion-footer {
+        button {
+            padding: 30px 0px;
+        }
+        .btn {
+            padding: 10px 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 1.2em;
+            &-right-item {
+                display: flex;
+                div {
+                    color: color($colors, primary);
+                    padding-top: 0px;
+                    margin-right: 10px;
+                }
+            }
+        }
+        .proceed {
+            background-color: color($colors, primary);
+            color: white;
+            span {
+                color: white;
+            }
+        }
+        .proceed::hover {
+            background-color: color($colors, orange);
+        }
+    }
+}

@@ -1,0 +1,33 @@
+page-products {
+    #productsContent {
+        background-color: color($colors, light);
+        .product-item {
+            margin: $content-margin;
+            width: auto;
+            border: 0;
+            background-color: color($colors, white);
+            box-shadow: 0 0 6px 1px color($colors, grey);
+            .item-inner {
+                border: 0;
+            }
+            .product-item-content {
+                white-space: normal;
+                font-size: $font-size-base;
+                color: color($colors, grey);
+                margin: 8px 0;
+            }
+            .product-item-img {
+                width: 64px;
+            }
+            .product-item-link {
+                text-decoration: none;
+                font-size: $font-size-base;
+                color: color($colors, orange);
+            }
+            .product-item-next-img {
+                height: 20px;
+                margin-bottom: -5px;
+            }
+        }
+    }
+}

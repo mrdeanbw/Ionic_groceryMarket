@@ -1,0 +1,50 @@
+page-product-list-by-category {
+    #content {
+        background-color: color($colors, light);
+        ion-item {
+            margin: $content-margin;
+            width: auto;
+            border: 0;
+            background-color: color($colors, white);
+            box-shadow: 0 0 6px 1px color($colors, grey);
+            .item-inner {
+                border: 0;
+            }
+            .image {
+                width: 40px;
+                height: 40px;
+                text-align: center;
+            }
+            .grocery-sub-categories-product {
+                h3 {
+                    margin: 10px 0;
+                    color: color($colors, primary);
+                }
+                h4 {
+                    color: grey;
+                }
+                .cost {
+                    float: left;
+                    text-decoration: line-through;
+                    margin-right: 10px;
+                }
+                .category-count {
+                    display: flex;
+                    border: 1px solid grey;
+                    border-radius: 15px;
+                    padding: 0px 5px;
+                    margin-top: 25px;
+                    span {
+                        flex: 1;
+                        text-align: center;
+                        padding: 0, 15px;
+                        color: color($colors, primary);
+                    }
+                    .count {
+                        flex: 3;
+                    }
+                }
+            }
+        }
+    }
+}

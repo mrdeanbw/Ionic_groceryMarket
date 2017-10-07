@@ -1,0 +1,44 @@
+<!--
+  Generated template for the ShopsList page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+    <ion-navbar #navBar>
+        <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+        <div class="navbar-header">
+            <div class="header-address">
+                <div>
+                    <span class="header-address-line">Seattle</span>
+                    <img src="assets/icon/Common/Pencil.png" class="edit-address" />
+                </div>
+            </div>
+            <span class="header-right-area">
+          <img src="assets/icon/Common/Search%20Inactive.png" />
+          <img src="assets/icon/Common/Cart.png" />
+      </span>
+        </div>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding id="shops-list">
+    <ion-list>
+        <ion-item *ngFor="let item of items" class="shop-item" (click)="selectCategory(item)">
+            <ion-avatar item-left>
+                <img src="{{'assets/icon/Common/' + item.shopname + '.png'}}" />
+            </ion-avatar>
+            <div class="shop-item-name-next">
+                <span>{{item.shopname}}</span>
+                <span item-right>
+                  <img src="assets/icon/Common/Next.png" />
+                </span>
+            </div>
+        </ion-item>
+    </ion-list>
+</ion-content>

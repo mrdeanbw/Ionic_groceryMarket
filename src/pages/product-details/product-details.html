@@ -1,0 +1,92 @@
+<!--
+  Generated template for the ProductDetails page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+    <ion-navbar #navBar>
+        <div class="navbar-header">
+            <div class="header-address">
+                <div>
+                    <span class="header-address-line">Product Details</span>
+                    <!--<img src="assets/icon/Common/Pencil.png" class="edit-address" />-->
+                </div>
+            </div>
+            <span class="header-right-area">
+              <img src="assets/icon/Common/Search%20Inactive.png" />
+              <img src="assets/icon/Common/Cart.png" (click)="gotoCartPage()"/>
+              <ion-badge>3</ion-badge>
+          </span>
+        </div>
+    </ion-navbar>
+
+    <ion-item class="detail-item-header-item">
+        <div class="detail-item-header">
+            <span class="detail-item-header-name">
+                <img src="assets/icon/Common/Shop.png" />
+                <span class="detail-item-header-name-text">{{navParams.data.shop.name}}</span>
+            </span>
+        </div>
+    </ion-item>
+</ion-header>
+
+
+<ion-content padding id="content">
+    <div class="detail-product-image">
+        <img src="assets/icon/Common/Grocery.png">
+    </div>
+    <div class="description">
+        <ion-list>
+            <ion-item>
+                <div class="description-header">
+                    <h2>{{item.name}}</h2>
+                    <div class="category-count">
+                        <span (click)="decrease(item)">-</span>
+                        <span class="count">{{item.count}}</span>
+                        <span (click)="increase(item)">+</span>
+                    </div>
+                </div>
+                <div class="description-content">
+                    <h2>$ {{item.cost}} each</h2>
+                    <h3 class="prev-cost">$ 2.99</h3>
+                    <h3>Price estimate: ${{item.cost}} ($0.99/lb * {{item.cost}}lb)</h3>
+                </div>
+                <div class="product-save">
+                    <input type="checkbox" id="savecheck" />
+                    <label for="savecheck" (click)="onCheck()">
+                        <div><i class="fa fa-check"></i></div>Subscribe and Save 15%
+                    </label>
+                    <div *ngIf="checked">
+                        <span>You will unlock 15% saving by subscribing this product</span>
+                    </div>
+                </div>
+
+            </ion-item>
+            <ion-item class="pan" *ngIf="checked">
+                <ion-select style=" margin-right: 10%;">
+                    <ion-option selected="true">1</ion-option>
+                    <ion-option>2</ion-option>
+                    <ion-option>3</ion-option>
+                </ion-select>
+                <ion-select>
+                    <ion-option selected="true">1 Month (most common)</ion-option>
+                    <ion-option>2 Month (most common)</ion-option>
+                    <ion-option>3 Month (most common)</ion-option>
+                </ion-select>
+            </ion-item>
+            <ion-item>
+                <div class="description-about">
+                    <h2>About</h2>
+                </div>
+                <div class="description-about-text">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                        in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                    </p>
+                </div>
+            </ion-item>
+        </ion-list>
+    </div>
+</ion-content>

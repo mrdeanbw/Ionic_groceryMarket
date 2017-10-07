@@ -1,0 +1,48 @@
+<!--
+  Generated template for the Address page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+    <ion-navbar #navBar>
+        <div class="navbar-header">
+            <div class="header-address">
+                <div>
+                    <span class="header-address-line">Address</span>
+                </div>
+            </div>
+        </div>
+    </ion-navbar>
+
+    <ion-item class="page-header-item">
+        <div class="page-header">
+            <span class="page-header-name">
+                <span class="page-header-name-text">Delivery Address</span>
+            </span>
+        </div>
+    </ion-item>
+</ion-header>
+
+
+<ion-content padding id="content">
+    <ion-list>
+        <ion-item *ngFor="let address of addresses">
+            <img src="assets/icon/Common/Recent.png" />
+            <div>
+                <span>{{address.address}}</span>
+            </div>
+        </ion-item>
+        <ion-item class="add-address" (click)="gotoAddAddressPage()">
+            <p class="plus-sign">+</p>
+            <div>
+                <span>Add New Address</span>
+            </div>
+        </ion-item>
+    </ion-list>
+</ion-content>
+
+<ion-footer>
+    <button ion-button full (click)="gotoPayment()">Continue</button>
+</ion-footer>

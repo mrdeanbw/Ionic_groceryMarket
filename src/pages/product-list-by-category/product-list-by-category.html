@@ -1,0 +1,32 @@
+<ion-content padding id="content">
+    <ion-list>
+        <ion-item *ngFor="let item of items">
+            <span item-left class="image">
+                <img class="category-item-image"  src="{{item.image}}" />
+            </span>
+            <div class="grocery-sub-categories-product">
+                <ion-grid>
+                    <ion-row>
+                        <ion-col col-8 (click)="gotoProductDetail(item)">
+                            <h2>{{item.itemname}}</h2>
+                            <h3>$ {{item.price}} each</h3>
+                            <h4 class="cost">$ 2.99</h4>
+                            <h4>(20% OFF)</h4>
+                        </ion-col>
+                        <ion-col col-4>
+                            <div class="category-count">
+                                <span (click)="decrease(item)">-</span>
+                                <span class="count">{{item.count}}</span>
+                                <span (click)="increase(item)">+</span>
+                            </div>
+                        </ion-col>
+                    </ion-row>
+                </ion-grid>
+            </div>
+
+            <span item-right>
+                <img src="assets/icon/Common/Next.png" />
+            </span>
+        </ion-item>
+    </ion-list>
+</ion-content>

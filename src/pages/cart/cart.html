@@ -1,0 +1,85 @@
+<!--
+  Generated template for the Cart page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+    <ion-navbar #navBar>
+        <div class="navbar-header">
+            <div class="header-address">
+                <div>
+                    <span *ngIf="modify==false" class="header-address-line">My Cart</span><br>
+                    <span *ngIf="modify" class="header-address-line">Modify Cart</span><br>
+                    <span class="header-cart-detail">2 stores 5 items</span>
+                </div>
+            </div>
+            <span class="header-right-area">
+              <img src="assets/icon/Common/Search%20Inactive.png" />
+              <img src="assets/icon/Common/Cart.png" />
+          </span>
+        </div>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding id="content">
+    <ion-list *ngFor="let shopname of shops">
+        <ion-item class="shop-title">
+            <img src="assets/icon/Common/Shop.png" />
+            <div>
+                <span>{{shopname}}</span>
+            </div>
+        </ion-item>
+        <ion-item *ngFor="let item of getItems(shopname)">
+            <span item-left class="image">
+                <img class="category-item-image"  src="{{'assets/icon/Common/Grocery.png'}}" />
+            </span>
+            <div class="cart-item">
+                <ion-grid>
+                    <ion-row>
+                        <ion-col col-8>
+                            <h2>{{item.name}}</h2>
+                            <h3>$ {{item.cost}} each</h3>
+                            <h4>- 0.61 lbs</h4>
+                        </ion-col>
+                        <ion-col col-4>
+                            <div class="cart-item-count">
+                                <span (click)="decrease(item)">-</span>
+                                <span class="count">{{item.count}}</span>
+                                <span (click)="increase(item)">+</span>
+                            </div>
+                        </ion-col>
+                    </ion-row>
+                </ion-grid>
+            </div>
+        </ion-item>
+    </ion-list>
+</ion-content>
+
+<ion-footer>
+    <div *ngIf="modify==false">
+        <button ion-button full primary (click)="gotoDateTimePage()">Proceed</button>
+    </div>
+    <div *ngIf="modify">
+        <div class="btn">
+            <span>Subtotal (5 items)</span>
+            <div class="btn-right-item">
+                <div>
+                    <span>$ 80</span>
+                </div>
+            </div>
+        </div>
+        <div class="btn proceed" (click)="gotoAddressPage()">
+            <span>Continue Shopping</span>
+            <div class="btn-right-item">
+                <div>
+                    <span>Proceed to checkout</span>
+                </div>
+                <img src="assets/icon/Common/Next White.png" />
+            </div>
+        </div>
+    </div>
+</ion-footer>
